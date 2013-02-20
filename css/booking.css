@@ -1,0 +1,81 @@
+.booking{
+    text-align: left;
+}
+
+.formLabel{
+    display:block;
+    width:180px;
+    margin:5px 0;
+    float:left;
+    clear:left;
+}
+
+.formField{
+    display:block;
+    margin:5px 0;
+    float:left;
+    clear:right;
+}
+
+.formField input{
+    width: 500px;
+}
+
+.formField .honorific{
+    width: 20px;
+}
+
+.formField #last_name, .formField #first_name{
+    width: 300px;
+}
+
+.formField #phone{
+    width: 200px;
+}
+
+.formField #house_number{
+    width: 45px;
+}
+
+.formField #remark{
+    width: 500px;
+}
+
+.formField .submit{
+    float: right;
+    width: 150px;
+    clear: both;
+}
+
+#error {
+    border: 1px solid #FF0000;
+    padding: 3px;
+    color: red;
+}
+
+.formField.formRadio label{
+    float: left;
+    clear: left;
+}
+
+.formField.formRadio input{
+    float: right;
+}
+
+.form-horizontal .controls {
+    text-align: left;
+}
+
+.requestRemark {
+    font-size: 12px;
+    margin: 7px 0;
+    height: 76px;;
+}
+
+#remark {
+    height: 320px;
+}
+
+.buttonDiv {
+    text-align: right;
+}

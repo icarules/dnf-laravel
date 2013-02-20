@@ -1,0 +1,15 @@
+
+
+.control-group {
+    text-align: left;
+}
+
+input, textarea, select {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    font-size: 14px;
+}
+
+.requestRemarkSpan {
+    margin-left: 46px;
+}
