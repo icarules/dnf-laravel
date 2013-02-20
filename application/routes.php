@@ -32,10 +32,16 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('home.index');
-});
+//Route::get('/', function()
+//{
+//	return View::make('home.index');
+//});
+
+//Route::controller('booking');
+
+Route::get('/', 'booking@request');
+
+Route::post('/', array('before' => 'csrf', 'uses' => 'booking@request'));
 
 /*
 |--------------------------------------------------------------------------

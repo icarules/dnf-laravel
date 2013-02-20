@@ -172,7 +172,5 @@ if ( ! Request::cli() and Config::get('session.driver') !== '')
 	Session::load();
 }
 
-var_dump(path('public'));
-
 if (Request::env() == 'local') { set_path('public', '../../www/dnf-style/booking'); }
 if (Request::env() == 'production') { set_path('public', '../../public_html/dnf-style/booking'); }
