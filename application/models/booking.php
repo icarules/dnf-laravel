@@ -7,6 +7,11 @@
 
         private static $rules = array();
 
+		public function customer()
+		{
+			return $this->belongs_to('Customer');
+		}
+
         public static function validateRequest($data)
         {
             // Set the rules for the booking request form
