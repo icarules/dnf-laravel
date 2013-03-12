@@ -2,6 +2,9 @@
     text-align: left;
 }
 
+/************************************************
+ Login / Signup forms
+************************************************/
 .formLabel{
     display:block;
     width:180px;
@@ -78,4 +81,104 @@
 
 .buttonDiv {
     text-align: right;
+}
+
+#adminContainer {
+    background-color: #F5F5F5;
+    overflow-y: scroll;
+}
+
+
+/************************************************
+ Tables
+************************************************/
+table.booking {
+    table-layout: fixed;
+}
+
+table.booking td div.popOver {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.popOver:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+table.booking th {
+    font-size: 92%;
+}
+
+table.booking td {
+    font-size: 89%;
+    vertical-align: middle;
+}
+
+table.booking th.customerNumber {
+    width: 4%;
+}
+
+table.booking th.name {
+    width: 15%;
+}
+
+table.booking th.status {
+    width: 6%;
+}
+
+table.booking th.requestDate {
+    width: 7%;
+}
+
+table.booking th.options {
+    width: 17%;
+}
+
+table.booking tbody {
+    cursor: pointer;
+}
+
+/************************************************
+ Admin pages
+************************************************/
+.logo img {
+    margin: -11px 0 0;
+    border: medium none;
+    float: left;
+    width: 120px;
+}
+
+.profileBar .calendar {
+    background: url("../img/calendar.png") no-repeat scroll center center transparent;
+    width: 60px;
+}
+
+.profileBar .logout {
+    background: url("../img/logout.png") no-repeat scroll center center transparent;
+    width: 60px;
+}
+
+.profileBar .orders {
+    background: url("../img/orders.png") no-repeat scroll center center transparent;
+    width: 60px;
+}
+
+.formHeader h3 {
+    text-align: left;
+    border-bottom: 1px solid #aaaaaa;
+}
+.formHeader h3 .crudMenu {
+    text-align: left;
+    float: right;
+}
+/************************************************
+ Detail page
+************************************************/
+.detailPage label, .detailPage .controls {
+    font-size: 13px;
+    padding-top: 5px;
+
 }

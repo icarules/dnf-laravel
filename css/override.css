@@ -1,5 +1,4 @@
 
-
 .control-group {
     text-align: left;
 }
@@ -13,3 +12,30 @@ input, textarea, select {
 .requestRemarkSpan {
     margin-left: 46px;
 }
+
+#container.adminContainer{
+    top: -14px;
+}
+
+header {
+    background: none repeat scroll 0 0 #B6B4B3;
+    border-bottom: 4px solid #9C9C9C;
+    height: 70px;
+    left: 0;
+    overflow: hidden;
+    top: 0;
+}
+
+header .navbar-inverse .navbar-inner {
+    background-color: #B6B4B3;
+    background-image: none;
+    border: medium none;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 10px;
+}
+
+header .logo {
+    margin-top: 8px;
+}
+
