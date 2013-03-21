@@ -118,7 +118,7 @@ table.booking td {
 }
 
 table.booking th.customerNumber {
-    width: 4%;
+    width: 5%;
 }
 
 table.booking th.name {
@@ -129,12 +129,16 @@ table.booking th.status {
     width: 6%;
 }
 
+table.booking th.remark {
+    width: 25%;
+}
+
 table.booking th.requestDate {
-    width: 7%;
+    width: 9%;
 }
 
 table.booking th.options {
-    width: 17%;
+    width: 16%;
 }
 
 table.booking tbody {
