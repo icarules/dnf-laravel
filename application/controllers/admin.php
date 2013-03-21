@@ -138,6 +138,47 @@ class Admin_Controller extends Base_Controller {
 		}
 	}
 
+    public function post_requestEdit()
+    {
+        $errors = null;
+
+        // Validate the user part of the form
+        if (!Customer::validate(Input::all())) {
+            $errors = Customer::$validation;
+        }
+
+        // Validate the booking request part of the form
+        if (!Booking::validateRequest(Input::all())) {
+
+            if (is_null($errors)) {
+                $errors = Booking::$validation;
+            } else {
+                $errors->messages += Booking::$validation->messages;
+            }
+        }
+
+        if (!is_null($errors)) {
+
+            // TODO:
+            // Houston....
+            return Redirect::to('/')->with('errors', $errors);
+        }
+        else {
+
+            // The eagle has landed
+            $this->saveRequest();
+        }
+
+        // TODO:
+		// Check if AJAX called
+		if (Request::ajax())
+		{
+
+        } else {
+
+        }
+
+    }
     public function post_request()
     {
         $errors = null;
@@ -171,9 +212,16 @@ class Admin_Controller extends Base_Controller {
         $this->layout->content = 'Thanx!';
     }
 
-    private function saveRequest()
+    private function saveRequest($bookingId = null)
     {
-        $customer = new Customer;
+        if (is_null($bookingId)) {
+
+            $customer = new Customer;
+            $booking  = new Booking;
+        } else {
+            $booking = Booking::find($bookingId);
+            $customer = Customer::find($booking->customer->id);
+        }
 
         $honorific = Input::get('honorific');
         $customer->honorific = $honorific[0];
@@ -188,7 +236,6 @@ class Admin_Controller extends Base_Controller {
 
         $customer->save();
 
-        $booking = new Booking;
 
         $booking->customer_remarks = Input::get('remark');
 

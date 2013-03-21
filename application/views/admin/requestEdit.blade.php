@@ -46,11 +46,11 @@
                         <div class="control-group">
                             <label class="control-label">Aanhef</label>
                              <div class="controls">
-                                {{ Form::radio('honorific[]', 'ms', 'true', array('id'=>'ms', 'class'=>'honorific')) }}
+                                {{ Form::radio('honorific[]', 'ms', ('ms' == $request->customer->honorific), array('id'=>'ms', 'class'=>'honorific')) }}
                                 {{ Form::label('ms', 'Mevrouw', array('class' => 'radio inline')) }}
                             </div>
                             <div class="controls">
-                               {{ Form::radio('honorific[]', 'mr', '', array('id'=>'mr', 'class'=>'honorific')) }}
+                               {{ Form::radio('honorific[]', 'mr', ('mr' == $request->customer->honorific), array('id'=>'mr', 'class'=>'honorific')) }}
                                {{ Form::label('mr', 'Meneer', array('class' => 'radio inline')) }}
                            </div>
                         </div>
