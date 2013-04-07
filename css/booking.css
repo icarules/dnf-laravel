@@ -3,7 +3,7 @@
 }
 
 /************************************************
- Login / Signup forms
+ Login / Sign up forms
 ************************************************/
 .formLabel{
     display:block;
@@ -50,12 +50,6 @@
     clear: both;
 }
 
-#error {
-    border: 1px solid #FF0000;
-    padding: 3px;
-    color: red;
-}
-
 .formField.formRadio label{
     float: left;
     clear: left;
@@ -88,15 +82,34 @@
     overflow-y: scroll;
 }
 
-
+#errorAlertFront {
+    margin: 0 0 14px 24px;
+}
 /************************************************
  Tables
 ************************************************/
-table.booking {
+.btn-group {
+    float: right;
+}
+
+table.list {
     table-layout: fixed;
 }
 
-table.booking td div.popOver {
+table.list th {
+    font-size: 92%;
+}
+
+table.list td {
+    font-size: 89%;
+    vertical-align: middle;
+}
+
+table.list tbody {
+    cursor: pointer;
+}
+
+div.popOver {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -106,15 +119,6 @@ table.booking td div.popOver {
 .popOver:hover {
     cursor: pointer;
     font-weight: bold;
-}
-
-table.booking th {
-    font-size: 92%;
-}
-
-table.booking td {
-    font-size: 89%;
-    vertical-align: middle;
 }
 
 table.booking th.customerNumber {
@@ -141,10 +145,76 @@ table.booking th.options {
     width: 16%;
 }
 
-table.booking tbody {
-    cursor: pointer;
+
+table.customer th.customerNumber {
+    width: 5%;
 }
 
+table.customer th.name {
+    width: 18%;
+}
+
+table.customer th.email {
+    width: 20%;
+}
+
+table.customer th.phone {
+    width: 10%;
+}
+
+table.customer th.address {
+    width: 18%;
+}
+
+table.customer th.city {
+    width: 12%;
+}
+
+table.customer th.options {
+    width: 16%;
+}
+
+.voucherIntro {
+    text-align: left;
+}
+
+table.emailTemplate th.type {
+    width: 12%;
+}
+
+table.emailTemplate th.name {
+    width: 25%;
+}
+
+table.emailTemplate th.subject {
+    width: 60%;
+}
+
+table.emailTemplate th.options {
+    width: 16%;
+}
+
+#emailBody {
+    height: 600px;
+}
+
+
+
+table.requestMail th.name {
+    width: 12%;
+}
+
+table.requestMail th.subject {
+    width: 60%;
+}
+
+table.requestMail th.sent {
+    width: 12%;
+}
+
+table.requestMail th.options {
+    width: 12%;
+}
 /************************************************
  Admin pages
 ************************************************/
@@ -170,11 +240,12 @@ table.booking tbody {
     width: 60px;
 }
 
-.formHeader h3 {
+.formHeader h3, .formHeader h5 {
     text-align: left;
     border-bottom: 1px solid #aaaaaa;
 }
-.formHeader h3 .crudMenu {
+
+.formHeader h3 .crudMenu, .formHeader h5 .crudMenu {
     text-align: left;
     float: right;
 }
