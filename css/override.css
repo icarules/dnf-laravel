@@ -1,3 +1,7 @@
+.debugMode {
+    border-bottom: 4px solid #ff0000;
+}
+
 .btn-small {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
@@ -87,3 +91,6 @@ header .logo {
     margin-top: 8px;
 }
 
+.requestMails .well {
+    padding: 8px 19px;
+}

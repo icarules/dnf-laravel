@@ -209,6 +209,18 @@ var utils = function () {
 							id   = redirectParts[1];
 
 							utils.getPage(page, id);
+						} else if(response.hasOwnProperty('debugMode')) {
+
+							if ('debug' == response.debugMode) {
+								$('header').addClass('debugMode');
+							} else {
+								$('header').removeClass('debugMode');
+							}
+
+							alert('De gegevens zijn opgeslagen');
+
+						} else {
+							alert('De gegevens zijn opgeslagen');
 						}
 
 					} else if (response.status == 'notfound') {
@@ -343,6 +355,18 @@ var utils = function () {
 						$('.alert-error').remove();
 
 						postForm('editEmailTemplate');
+					});
+
+					break;
+
+				case 'settings':
+					$('#saveSettings').click(function (e) {
+						e.preventDefault();
+
+						// Remove the error alerts
+						$('.alert-error').remove();
+
+						postForm('settings');
 					});
 
 					break;
