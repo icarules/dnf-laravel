@@ -112,6 +112,8 @@ class Booking_Controller extends Base_Controller {
         $x = 'commit timing test';
 
         $y = 'home brewed change';
+
+        $z = 'TimeShift test';
     }
 
 }
