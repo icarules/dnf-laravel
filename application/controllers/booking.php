@@ -110,6 +110,8 @@ class Booking_Controller extends Base_Controller {
         $id = "i'm a dummy";
         
         $x = 'commit timing test';
+
+        $z = 'TimeShift test';
     }
 
 }
