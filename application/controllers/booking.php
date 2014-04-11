@@ -106,4 +106,8 @@ class Booking_Controller extends Base_Controller {
         $customer->bookings()->save($booking);
     }
 
+    private function gitShareTest() {
+        $id = "i'm a dummy";
+    }
+
 }
