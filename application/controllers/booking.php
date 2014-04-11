@@ -114,6 +114,10 @@ class Booking_Controller extends Base_Controller {
         $y = 'home brewed change';
 
         $z = 'TimeShift test';
+
+        $q = 'desperate attempt';
     }
+
+
 
 }
