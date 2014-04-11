@@ -108,6 +108,8 @@ class Booking_Controller extends Base_Controller {
 
     private function gitShareTest() {
         $id = "i'm a dummy";
+        
+        $x = 'commit timing test';
     }
 
 }
